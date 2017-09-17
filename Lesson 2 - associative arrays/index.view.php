@@ -8,9 +8,38 @@
 Hello, User!
 </h1>
 
+<p>
+	This is <?= $tale['name'] ?>:
+</p>
+
+
 <ul>
 	
-	<?php foreach ($person as $trait => $value) {
+	<?php foreach ($tale as $trait => $value) {
+		if ($trait == 'glasses' && $value == true) {
+			$value = '&#x1f453;';
+		} elseif ($trait == 'glasses' && $value == false) {
+			$value = '&#x1f440;';
+		}
+		echo "<li><strong>$trait: </strong> $value</li>";
+	}
+
+	?>
+</ul>
+
+<p>
+	This is <?= $avra['name'] ?>:
+</p>
+
+
+<ul>
+	
+	<?php foreach ($avra as $trait => $value) {
+		if ($trait == 'glasses' && $value == true) {
+			$value = '&#x1f453;';
+		} elseif ($trait == 'glasses' && $value == false) {
+			$value = '&#x1f440;';
+		}
 		echo "<li><strong>$trait: </strong> $value</li>";
 	}
 
@@ -18,8 +47,13 @@ Hello, User!
 </ul>
 
 
+<br/>
+
+
+
+
 <?php
-if ($task['completed'] != true) : ?>
+if (! $task['completed']) : ?>
 	<p>
 		Hey, <?= $task['assigned_to']?>, you have to <?= $task['title']?> <?= $task['due']?>!
 	</p>
@@ -45,7 +79,7 @@ if ($task['completed'] != true) : ?>
 		<strong>Due: </strong> <?= $task['due']; ?>
 	</li>
 	<li>
-		<strong>Status: </strong> <?= $task['completed'] ? 'complete' : 'incomplete'; ?>
+		<strong>Status: </strong> <?= $task['completed'] ? '&#10004;' : '&#10008;'; ?>
 	</li>
 
 </ul>
