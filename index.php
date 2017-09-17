@@ -10,5 +10,21 @@ $names = [
 ];
 
 
+// associative arrays (key-value pairs)
+
+$person = [
+	'age' => 26,
+	'hair' => 'brown',
+	'profession' => 'pharmacist'
+];
+
+
+
+$task = [
+	'title' => 'pay the rent',
+	'assigned_to' => 'Stefan',
+	'due' => 'today',
+	'completed' => true
+];
 
 require 'index.view.php';
