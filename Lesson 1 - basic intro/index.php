@@ -9,5 +9,6 @@ $names = [
 	'Poglavica Ogromna Karina'
 ];
 
+$names[] = 'Djoka';
 
 require 'index.view.php';
