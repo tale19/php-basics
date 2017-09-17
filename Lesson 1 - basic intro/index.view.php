@@ -25,15 +25,6 @@ Hello, User!
 	?>
 </ul>
 
-<?php
-if ($task['completed'] != true) : ?>
-	Hey, <?= $task['assigned_to']?>, you have to <?= $task['title']?> <?= $task['due']?>!
-<?php else : ?>
-	No tasks for today! Enjoy the rest of your day!
-<?php endif ?>
-
-
-
 
 </body>
 
